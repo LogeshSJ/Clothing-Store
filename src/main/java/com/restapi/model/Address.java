@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -35,8 +36,8 @@ public class Address {
     private AppUser appUser;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "address")
-    private Order order;
+    @OneToMany(mappedBy = "address")
+    private List<Order> order;
 
     @CreationTimestamp
     @Column(updatable = false)

@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/user")
 //@PreAuthorize("hasRole('ROLE_USER')")
-@RolesAllowed(Role.USER)
+
 public class UserController {
 
     @Autowired

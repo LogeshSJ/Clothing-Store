@@ -24,7 +24,7 @@ public class Category {
     @Column(nullable = false, length = 200)
     private String title;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Cloth> clothList = new ArrayList<>();
 
     @CreationTimestamp

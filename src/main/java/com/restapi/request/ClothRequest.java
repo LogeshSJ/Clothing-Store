@@ -27,6 +27,7 @@ public class ClothRequest {
     @NotNull
     @Min(value=3,message = "price atleast have 3 character")
     private Double price;
-    @NotEmpty
-    private byte[] photo;
+
+
+//    private String photo;
 }

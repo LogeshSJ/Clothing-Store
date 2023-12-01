@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -34,9 +35,8 @@ public class Cloth {
     @Transient
     private Integer count;
 
-    @Lob
-    @Column(name = "photo", columnDefinition = "BLOB")
-    private byte[] photo;
+    @Nullable
+    private String photo;
 
     @JsonIgnore
     @ManyToOne
@@ -44,7 +44,7 @@ public class Cloth {
     private Category category;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "cloth")
+    @OneToMany(mappedBy = "cloth", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cart> carts = new ArrayList<>();
 
     @CreationTimestamp

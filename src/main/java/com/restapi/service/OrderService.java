@@ -69,11 +69,15 @@ public class OrderService {
         return getUserOrders(userId);
     }
 
-    public List<OrderResponse> getUserOrders(Long userId) {
-        List<Order> orderList = (List<Order>) orderRepository.findUserOrder(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("userId", "userId", userId));
-        return orderDto.mapToOrderResponse(orderList);
-    }
+//    public List<OrderResponse> getUserOrders(Long userId) {
+//        List<Order> orderList = (List<Order>) orderRepository.findUserOrder(userId)
+//                .orElseThrow(() -> new ResourceNotFoundException("userId", "userId", userId));
+//        return orderDto.mapToOrderResponse(orderList);
+//    }
+public List<OrderResponse> getUserOrders(Long userId) {
+    List<Order> orderList = orderRepository.findByAppUserId(userId);
+    return orderDto.mapToOrderResponse(orderList);
+}
 
     public List<OrderResponse> getAllOrders() {
         List<Order> orderList = orderRepository.findAll();

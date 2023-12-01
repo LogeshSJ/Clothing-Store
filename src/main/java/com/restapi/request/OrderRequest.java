@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -13,9 +15,11 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderRequest {
-    @NotEmpty
+    @NotNull
+    @Min(value=1,message = "userId cannot be empty")
     private Long userId;
-    @NotEmpty
+    @NotNull
+    @Min(value=1,message = "addressId cannot be empty")
     private Long addressId;
 
 }

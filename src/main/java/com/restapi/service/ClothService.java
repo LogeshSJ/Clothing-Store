@@ -8,10 +8,14 @@ import com.restapi.repository.CategoryRepository;
 import com.restapi.repository.ClothRepository;
 import com.restapi.request.ClothRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClothService {
@@ -24,6 +28,9 @@ public class ClothService {
 
     @Autowired
     private ClothRepository clothRepository;
+
+    @Autowired
+    private StorageService storageService;
 
     public List<Cloth> findAll() {
         return clothRepository.findAll();
@@ -56,4 +63,23 @@ public class ClothService {
         return findAll();
     }
 
+    public List<Cloth> createCloth(Cloth cloth, Long categoryId) {
+        Category category = categoryRepository.findById(categoryId).orElseThrow();
+        cloth.setCategory(category);
+        clothRepository.save(cloth);
+        return findAll();
+    }
+
+//    public File getFile(Long id) {
+//    }
+
+    public File getFile(Long id) throws IOException {
+        Cloth cloth = clothRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("id", "id", id));
+
+        Resource resource = storageService.loadFileAsResource(cloth.getPhoto());
+
+        return resource.getFile();
+    }
 }
+

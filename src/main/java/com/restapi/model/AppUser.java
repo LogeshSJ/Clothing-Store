@@ -11,7 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -45,9 +45,15 @@ public class AppUser {
     @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role roles;
 
+    @OneToMany(mappedBy = "appUser")
+    private List<Address> addressList;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
 //    private Boolean deleteFlag = false;
+//@OneToMany(mappedBy = "appUser")
+//private List<Address> addressList;
+
 
 }

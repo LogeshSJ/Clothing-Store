@@ -1,7 +1,9 @@
 package com.restapi.dataloader;
 
 import com.restapi.model.AppUser;
+import com.restapi.model.OrderStatus;
 import com.restapi.model.Role;
+import com.restapi.repository.OrderStatusRepository;
 import com.restapi.repository.RoleRepository;
 import com.restapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private OrderStatusRepository orderStatusRepository;
+
     @Override
     @Transactional
     public void onApplicationEvent(final ContextRefreshedEvent event) {
@@ -41,8 +46,25 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
         createUserIfNotFound("user", "user", userRole);
         createUserIfNotFound("admin", "admin", adminRole);
 
+        createStatus("Pending");
+        createStatus("Confirmed");
+        createStatus("Out for Delivery");
+        createStatus("Delivered");
+
         alreadySetup = true;
     }
+@Transactional
+    private void createStatus(String status) {
+        orderStatusRepository.save(new OrderStatus(status));
+//    OrderStatus orderStatus = orderStatusRepository.findByStatus(status);
+//    if (orderStatus == null) {
+//        orderStatus = new OrderStatus(status);
+//        orderStatusRepository.save(orderStatus);
+//    }
+
+    }
+
+
 
     @Transactional
     private Role createRoleIfNotFound(final String username) {
@@ -70,4 +92,77 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
         }
         return user;
     }
+
+//    private boolean alreadySetup = false;
+//
+//    @Autowired
+//    private UserRepository userRepository;
+//
+//    @Autowired
+//    private RoleRepository roleRepository;
+//
+//    @Autowired
+//    private BCryptPasswordEncoder bCryptPasswordEncoder;
+//
+//    @Autowired
+//    private OrderStatusRepository orderStatusRepository;
+//
+//    @Override
+//    @Transactional
+//    public void onApplicationEvent(final ContextRefreshedEvent event) {
+//        if (alreadySetup) {
+//            return;
+//        }
+//
+////        Create user roles
+//        Role userRole = createRoleIfNotFound(Role.USER);
+//        Role adminRole = createRoleIfNotFound(Role.ADMIN);
+////        Create user
+//        createUserIfNotFound("user", "user", userRole);
+//        createUserIfNotFound("admin", "admin", adminRole);
+//
+//        createStatus("Pending");
+//        createStatus("Confirmed");
+//        createStatus("Out for Delivery");
+//        createStatus("Delivered");
+//
+//        alreadySetup = true;
+//    }
+//
+//    @Transactional
+//    private void createStatus(String status) {
+//
+//        OrderStatus orderStatus = orderStatusRepository.findByStatus(status);
+//        if (orderStatus == null) {
+//            orderStatus = new OrderStatus(status);
+//            orderStatusRepository.save(orderStatus);
+//        }
+//    }
+//
+//    @Transactional
+//    private Role createRoleIfNotFound(final String username) {
+//        Role role = roleRepository.findByName(username);
+//        if (role == null) {
+//            role = new Role();
+//            role.setName(username);
+//            role = roleRepository.save(role);
+//        }
+//        return role;
+//    }
+//
+//    @Transactional
+//    private AppUser createUserIfNotFound(final String username, final String password,
+//                                         final Role role) {
+//        Optional<AppUser> optionalUser = userRepository.findByUsername(username);
+//        AppUser user = null;
+//        if (optionalUser.isEmpty()) {
+//            user = new AppUser();
+//            user.setUsername(username);
+//            user.setName(username);
+//            user.setPassword(bCryptPasswordEncoder.encode(password));
+//            user.setRoles(role);
+//            user = userRepository.save(user);
+//        }
+//        return user;
+//    }
 }

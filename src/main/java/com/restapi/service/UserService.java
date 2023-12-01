@@ -56,7 +56,7 @@ public class UserService {
 
     public AppUser findUserById(Long id) {
         return userRepository.findById(id)
-                .orElseThrow(()-> new ResourceNotFoundException("user", "id", id));
+                .orElseThrow(()-> new ResourceNotFoundException("id", "id", id));
     }
 
 }
