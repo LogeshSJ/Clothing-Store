@@ -15,7 +15,8 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 **Credentials**
 
     👉 Role 
-        📧Email = "a" | 🔐Password = "a"
+        📧Email = "admin" | 🔐Password = "admin"
+        📧Email = "user" | 🔐Password = "user"
 
 
 **Technologies used**
@@ -27,7 +28,12 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 **Screenshots**
 
-    🔗 Links
+    ![Screenshot (1)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/65836fad-ed64-4753-a39a-cd69f1e60121)
+    ![Screenshot (2)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/c59cc290-603f-47a9-97e5-50d963624194)
+    ![Screenshot (4)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/33cb9ce6-854c-4836-928b-330bd0c2bf60)
+
+
+
 
 
 **Challenges**
