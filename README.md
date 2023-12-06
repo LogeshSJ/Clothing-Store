@@ -53,11 +53,12 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 **Hardest Errors** 
 
-    🚩 Error 1
-    🚩 Error 2
-    🚩 Error 3
-    🚩 Error 4
-    🚩 Error 5
+ 🚩 Internal server error Hibernate nested exception - Resolved by revisiting modal mappings for smoother interactions between clothing items and their attributes. 🧩🔄
+🚩 Internal server error for deleting nested entities - Successfully managed by implementing comprehensive entity management using cascading delete operations for inventory items. 🗑️🔄
+
+🚩 Altering the entity and updating it - Seamlessly implemented updates to clothing item entities for improved functionality in managing product details. 🔄🛍️
+
+🚩 Handling logic for more than 1 row found in one-to-one mapping - Navigated SQL and server errors meticulously, ensuring accurate mappings between specific clothing attributes and items. 🗺️📝🚧
 
 
 **Repository Link**
