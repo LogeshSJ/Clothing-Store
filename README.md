@@ -53,27 +53,28 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 **Hardest Errors** 
 
- 🚩 Internal server error Hibernate nested exception - Resolved by revisiting modal mappings for smoother interactions between clothing items and their attributes. 🧩🔄
-🚩 Internal server error for deleting nested entities - Successfully managed by implementing comprehensive entity management using cascading delete operations for inventory items. 🗑️🔄
-
-🚩 Altering the entity and updating it - Seamlessly implemented updates to clothing item entities for improved functionality in managing product details. 🔄🛍️
-
-🚩 Handling logic for more than 1 row found in one-to-one mapping - Navigated SQL and server errors meticulously, ensuring accurate mappings between specific clothing attributes and items. 🗺️📝🚧
+    🚩 Internal server error Hibernate nested exception - Resolved by revisiting modal mappings for smoother interactions between clothing items and their attributes. 🧩🔄
+    🚩 Internal server error for deleting nested entities - Successfully managed by implementing comprehensive entity management using cascading delete operations for inventory items. 🗑️🔄
+    🚩 Altering the entity and updating it - Seamlessly implemented updates to clothing item entities for improved functionality in managing product details. 🔄🛍️
+    🚩 Handling logic for more than 1 row found in one-to-one mapping - Navigated SQL and server errors meticulously, ensuring accurate mappings between specific clothing attributes and items. 🗺️📝🚧
+    
 
 
 **Repository Link**
 
-    🔗 Repo link 
+    🔗 Front end: https://github.com/LogeshSJ/Clothing
+    🔗 Back end: https://github.com/LogeshSJ/Clothing-Store
 
 
 **MySQL Schema**
 
-    👉 Image of schema 
+    👉 ![Screenshot (5)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/473a3c13-97d5-4e6c-9cac-9e9baccd626e)
+
 
 
 Demo Video Url
   
-    🔗 url of demo video
+    🔗 url of demo video https://drive.google.com/file/d/19afDHbNaA1lqySUkTV68fBNLku_CVjgQ/view?usp=sharing
   
   
   
