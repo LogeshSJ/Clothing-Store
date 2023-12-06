@@ -37,9 +37,8 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 
 **Challenges**
-# Backend Challenges for a Clothing Store:
 
-    🔴 Point one
+    🔴 Backend Challenges for a Clothing Store:
     🔴 Point two
     🔴 Point three
     🔴 Point four
