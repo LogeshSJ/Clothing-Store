@@ -28,6 +28,8 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 **Screenshots**
 ![Screenshot (1)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/29fb9fa4-ba33-440b-a4c5-d70f99122664)
+![Screenshot (2)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/18b03f38-4595-436a-b1aa-fba213133dce)
+![Screenshot (4)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/638acc62-f2ee-4c05-8ba5-3f6006551069)
 
 
 
@@ -66,8 +68,7 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 **MySQL Schema**
 
     👉 ![Screenshot (5)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/473a3c13-97d5-4e6c-9cac-9e9baccd626e)
-![Screenshot (2)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/18b03f38-4595-436a-b1aa-fba213133dce)
-![Screenshot (4)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/638acc62-f2ee-4c05-8ba5-3f6006551069)
+
 
 
 
