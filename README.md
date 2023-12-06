@@ -67,7 +67,8 @@ Dashboard: A comprehensive overview of essential statistics for informed decisio
 
 **MySQL Schema**
 
-  ![Screenshot (5)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/3505798f-da7c-4ae5-806a-b5f0084afbb4)
+ ![Screenshot (5)](https://github.com/LogeshSJ/Clothing-Store/assets/145537988/fce51403-a8db-47e1-a7d3-6b5ef5362bf7)
+
 
 
 
